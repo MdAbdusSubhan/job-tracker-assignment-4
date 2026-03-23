@@ -189,3 +189,19 @@ for (let i = 0; i < btnCardRejected.length; i++) {
 
 
 }
+
+document.addEventListener("click", function(event){
+
+    if(event.target.classList.contains("btn-delete", "fa-trash-can")){
+
+        const card = event.target.parentNode.parentNode;
+
+        card.remove();
+
+        
+        interviewCount.innerText = interviewList.children.length;
+        rejectedCount.innerText = rejectedList.children.length;
+        totalCount.innerText = jobList.children.length;
+    }
+
+});
