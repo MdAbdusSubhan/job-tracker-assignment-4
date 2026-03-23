@@ -129,9 +129,14 @@ for (let i = 0; i < btnCardInterview.length; i++) {
 
         interviewList.appendChild(clone);
 
-        const cloneBtn = clone.querySelector(".btn-card-intervew");
+        const cloneBtn = clone.querySelector(".btn-card-rejected");
         cloneBtn.disabled = true;
         cloneBtn.classList.add("opacity-50", "cursor-not-allowed")
+
+        const cloneBtn2 = clone.querySelector(".btn-card-intervew");
+        cloneBtn2.disabled = true;
+        cloneBtn2.classList.add("opacity-50", "cursor-not-allowed")
+
 
         interviewCount.innerText = interviewList.children.length;
         rejectedCount.innerText = rejectedList.children.length;
@@ -192,7 +197,7 @@ for (let i = 0; i < btnCardRejected.length; i++) {
 
 document.addEventListener("click", function(event){
 
-    if(event.target.classList.contains("btn-delete", "fa-trash-can")){
+    if(event.target.classList.contains("fa-trash-can")){
 
         const card = event.target.parentNode.parentNode;
 
