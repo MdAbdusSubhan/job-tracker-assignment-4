@@ -199,6 +199,22 @@ document.addEventListener("click", function(event){
 
     if(event.target.classList.contains("fa-trash-can")){
 
+        const card = event.target.parentNode.parentNode.parentNode;
+
+        card.remove();
+
+        
+        interviewCount.innerText = interviewList.children.length;
+        rejectedCount.innerText = rejectedList.children.length;
+        totalCount.innerText = jobList.children.length;
+    }
+
+});
+
+document.addEventListener("click", function(event){
+
+    if(event.target.classList.contains("btn-delete")){
+
         const card = event.target.parentNode.parentNode;
 
         card.remove();
